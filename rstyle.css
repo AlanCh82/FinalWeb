@@ -1,5 +1,7 @@
 body{
     text-align: center;
+    background-image: url(images/back.jpg);
+    background-size: cover;
 }
 canvas{
     border: 2px solid black;
