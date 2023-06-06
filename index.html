@@ -7,6 +7,10 @@
     </head>
     <body>
         <h1>CS151</h1>
+        <div>
+            <canvas id="myCanvas" width="1090" height="594"></canvas>
+            <p id="talkBox"></p>
+        </div>
         <dialog id="mind">
             <h2>心理測驗：請完成下面故事：<h2>
                 <h3>你身處河岸邊上，想要渡河到對岸。這時河上駛來了一艘船，船上只有漁夫一人。</h3>
@@ -29,11 +33,10 @@
             <button id="jokebutton">查看</button>
             <button id="close">close</button> 
         </dialog>
-        <div>
-            <canvas id="myCanvas" width="1090" height="594"></canvas>
-            <p id="talkBox"></p>
-        </div>
-        <div id="player" style="visibility:hidden"></div><!-- YouTube Video Player -->
+        <dialog id="video">
+            <div id="player"></div><!-- YouTube Video Player -->
+            <button id="close4">close</button>
+        </dialog>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="https://www.youtube.com/iframe_api"></script>
         <script src="playList.js"></script>

@@ -1,5 +1,9 @@
 let mapArray, ctx, currentImgMain;
 let imgMountain, imgMain, imgEnemy;
+let close4=document.querySelector("#close4");
+close4.addEventListener("click", function(){
+  video.close();
+})
 //mapArray - 決定地圖中每個格子的元素
 //ctx - HTML5 Canvas用
 //currentImgMainX, currentImgMainY - 決定主角所在座標
@@ -124,12 +128,13 @@ $(document).on("keydown",function(event){
                 currentImgMain.y = targetImg.y;
                 break;
             case 1: // 功能(不可移動)
+                $("#talkBox").text("來點音樂");
                 if(event.code=="Enter"){
-                    $("#talkBox").text("來點音樂");
+                    video.showModal();
                     player.playVideo();
-                    var element = document.getElementById("player");
+                    //var element = document.getElementById("player");
                     //element.style.visibility = hidden;
-                    element.style.visibility = "visible";
+                    //element.style.visibility = "visible";
                 }break;
             case 2: // 終點(可移動)
                 $("#talkBox").text("前往元智");
