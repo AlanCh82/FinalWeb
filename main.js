@@ -1,11 +1,24 @@
 let mapArray, ctx, currentImgMain;
 let imgMountain, imgMain, imgEnemy;
 let close4=document.querySelector("#close4");
+let close5=document.querySelector("#close5");
 close4.addEventListener("click", function(){
   video.close();
 })
+close5.addEventListener("click", function(){
+    TV.close();
+})
+  
 let player; //YouTube Player
 let currentPlay = 0; //記錄目前撥到第幾首歌
+$("#tv").on("click", showTT);
+$("#weather").on("click", showWeather);
+function showTT(){
+    window.open('HTML5video/index.html');
+}
+function showWeather(){
+    window.open('0516_GetWeatherData/index.html');
+}
 //YouTube API Ready
 function onYouTubeIframeAPIReady(){
     player = new YT.Player("player",{
@@ -220,9 +233,9 @@ $(document).on("keydown",function(event){
                     mind.showModal();
                 }break;
             case 9: // 功能(不可移動)
-                $("#talkBox").text("天氣預報");
+                $("#talkBox").text("電視");
                 if(event.code=="Enter"){
-                    window.open('0516_GetWeatherData/index.html');
+                    TV.showModal();
                 }break;
             case 10: // 功能(不可移動)
                 $("#talkBox").text("新聞");
